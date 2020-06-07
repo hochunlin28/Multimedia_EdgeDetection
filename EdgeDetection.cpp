@@ -108,7 +108,10 @@ int main(int argc, char* argv[]){
 		}
 	}
 
-	/*show histogram image*/
+	/*show histogram image and save*/
+	imwrite("equalize.jpg",dst);
+	imwrite("edge_detect.jpg",dst_gradient);
+
 	namedWindow("origin",CV_WINDOW_AUTOSIZE);
 	imshow("origin",data_src);
 	imshow("equalize",dst);
